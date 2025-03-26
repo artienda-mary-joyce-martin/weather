@@ -205,3 +205,16 @@ class _WeatherAppState extends State<WeatherApp> {
                 weatherDescription,
                 style: TextStyle(fontSize: 22, fontStyle: FontStyle.italic, color: Colors.white),
               ),
+              SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.water_drop, color: Colors.blue),
+                  SizedBox(width: 5),
+                  Text(
+                    "Humidity: ${humidity.toStringAsFixed(0)}%",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+
+                  ),
+                ],
+              ),
