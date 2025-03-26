@@ -236,3 +236,12 @@ class _WeatherAppState extends State<WeatherApp> {
       ),
     );
   }
+
+
+  Color getWeatherIconColor(String description) {
+    switch (description.toLowerCase()) {
+      case 'clear sky':
+        return Color(0xFFFFA726); // Orange Accent
+      case 'few clouds':
+      case 'fog':
+        return Color(0xFFFBFBFB); // Orange Accent
