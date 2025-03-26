@@ -218,3 +218,21 @@ class _WeatherAppState extends State<WeatherApp> {
                   ),
                 ],
               ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.air, color: Colors.lightBlueAccent),
+                  SizedBox(width: 5),
+                  Text(
+                    "Wind Speed: ${windSpeed.toStringAsFixed(1)} m/s",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
