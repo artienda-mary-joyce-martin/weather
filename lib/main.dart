@@ -15,3 +15,13 @@ class WeatherApp extends StatefulWidget {
   @override
   _WeatherAppState createState() => _WeatherAppState();
 }
+
+class _WeatherAppState extends State<WeatherApp> {
+  String city = "Santa Ana";
+  double temperature = 0.0;
+  String weatherDescription = "";
+  double humidity = 0.0;
+  double windSpeed = 0.0;
+  bool isCelsius = true;
+  TextEditingController cityController = TextEditingController();
+  bool isLoading = false;
