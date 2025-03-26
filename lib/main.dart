@@ -161,3 +161,12 @@ class _WeatherAppState extends State<WeatherApp> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+
+        backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: openSettings,
+          ),
+        ],
+      ),
