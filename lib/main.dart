@@ -193,3 +193,4 @@ class _WeatherAppState extends State<WeatherApp> {
 
                 ),
               ),
+              SizedBox(height: 10),
