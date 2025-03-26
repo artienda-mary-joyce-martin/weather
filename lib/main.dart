@@ -183,3 +183,13 @@ class _WeatherAppState extends State<WeatherApp> {
                 city,
                 style: TextStyle(fontSize: 50, fontWeight: FontWeight.w300,color: Colors.white),
               ),
+              SizedBox(height: 10),
+              Text(
+                "${temperature.toStringAsFixed(1)}° ${isCelsius ? 'C' : 'F'}",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                    color: Colors.white,
+
+                ),
+              ),
