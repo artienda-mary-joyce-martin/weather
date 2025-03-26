@@ -100,3 +100,11 @@ class _WeatherAppState extends State<WeatherApp> {
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setModalState) {
             return Padding(
+              padding: EdgeInsets.only(
+                  bottom: MediaQuery
+                      .of(context)
+                      .viewInsets
+                      .bottom,
+                  left: 16.0,
+                  right: 16.0,
+                  top: 16.0),
