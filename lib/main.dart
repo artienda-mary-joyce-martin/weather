@@ -245,3 +245,10 @@ class _WeatherAppState extends State<WeatherApp> {
       case 'few clouds':
       case 'fog':
         return Color(0xFFFBFBFB); // Orange Accent
+
+      case 'scattered clouds':
+      case 'broken clouds':
+        return Color(0xFF9E9E9E); // Grey
+      case 'shower rain':
+      case 'rain':
+        return Color(0xFF1E88E5); // Blue
