@@ -200,3 +200,8 @@ class _WeatherAppState extends State<WeatherApp> {
                 size: 80,
                 color: getWeatherIconColor(weatherDescription),
               ),
+              SizedBox(height: 5),
+              Text(
+                weatherDescription,
+                style: TextStyle(fontSize: 22, fontStyle: FontStyle.italic, color: Colors.white),
+              ),
