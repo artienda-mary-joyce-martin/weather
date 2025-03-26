@@ -194,3 +194,9 @@ class _WeatherAppState extends State<WeatherApp> {
                 ),
               ),
               SizedBox(height: 10),
+
+              Icon(
+                getWeatherIcon(weatherDescription),
+                size: 80,
+                color: getWeatherIconColor(weatherDescription),
+              ),
