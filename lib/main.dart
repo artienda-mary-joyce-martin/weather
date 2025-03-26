@@ -10,3 +10,8 @@ void main() {
 
   ));
 }
+
+class WeatherApp extends StatefulWidget {
+  @override
+  _WeatherAppState createState() => _WeatherAppState();
+}
