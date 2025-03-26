@@ -25,3 +25,8 @@ class _WeatherAppState extends State<WeatherApp> {
   bool isCelsius = true;
   TextEditingController cityController = TextEditingController();
   bool isLoading = false;
+
+  Future<void> fetchWeather({String? newCity}) async {
+    setState(() {
+      isLoading = true;
+    });
