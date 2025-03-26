@@ -121,3 +121,11 @@ class _WeatherAppState extends State<WeatherApp> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
+                      String newCity = cityController.text.trim();
+                      if (newCity.isNotEmpty) {
+                        fetchWeather(newCity: newCity);
+                      }
+                      Navigator.pop(context);
+                    },
+                    child: Text("Update City"),
+                  ),
