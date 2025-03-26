@@ -108,3 +108,13 @@ class _WeatherAppState extends State<WeatherApp> {
                   left: 16.0,
                   right: 16.0,
                   top: 16.0),
+                 child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextField(
+                    controller: cityController,
+                    decoration: InputDecoration(
+                      labelText: "Enter City",
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
