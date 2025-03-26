@@ -57,3 +57,12 @@ class _WeatherAppState extends State<WeatherApp> {
           SnackBar(content: Text("City not found!")),
         );
       }
+    } catch (e) {
+      setState(() {
+        isLoading = false;
+      });
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Error fetching weather data")),
+      );
+    }
+  }
