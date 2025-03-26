@@ -90,3 +90,13 @@ class _WeatherAppState extends State<WeatherApp> {
     }
     return FontAwesomeIcons.questionCircle;
   }
+
+  void openSettings() {
+    cityController.text = city;
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setModalState) {
+            return Padding(
