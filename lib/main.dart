@@ -118,3 +118,6 @@ class _WeatherAppState extends State<WeatherApp> {
                       border: OutlineInputBorder(),
                     ),
                   ),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: () {
