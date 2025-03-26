@@ -49,7 +49,7 @@ class _WeatherAppState extends State<WeatherApp> {
           windSpeed = data["wind"]["speed"].toDouble();
           isLoading = false;
         });
-        } else {
+      } else {
         setState(() {
           isLoading = false;
         });
@@ -108,7 +108,7 @@ class _WeatherAppState extends State<WeatherApp> {
                   left: 16.0,
                   right: 16.0,
                   top: 16.0),
-                 child: Column(
+              child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   TextField(
@@ -252,7 +252,7 @@ class _WeatherAppState extends State<WeatherApp> {
       case 'shower rain':
       case 'rain':
         return Color(0xFF1E88E5); // Blue
-        case 'thunderstorm':
+      case 'thunderstorm':
         return Color(0xFF673AB7); // Deep Purple
       case 'snow':
         return Color(0xFF81D4FA); // Light Blue Accent
