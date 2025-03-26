@@ -170,3 +170,9 @@ class _WeatherAppState extends State<WeatherApp> {
           ),
         ],
       ),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Center(
+          child: isLoading
+              ? CircularProgressIndicator()
+              : Column(
