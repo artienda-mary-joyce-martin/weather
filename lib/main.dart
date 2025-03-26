@@ -176,3 +176,10 @@ class _WeatherAppState extends State<WeatherApp> {
           child: isLoading
               ? CircularProgressIndicator()
               : Column(
+
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                city,
+                style: TextStyle(fontSize: 50, fontWeight: FontWeight.w300,color: Colors.white),
+              ),
