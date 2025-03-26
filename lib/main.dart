@@ -38,3 +38,14 @@ class _WeatherAppState extends State<WeatherApp> {
 
     try {
       final response = await http.get(url);
+
+      if (response.statusCode == 200) {
+        final data = json.decode(response.body);
+        setState(() {
+          city = newCity ?? city;
+          temperature = data["main"]["temp"].toDouble();
+          weatherDescription = data["weather"][0]["description"];
+          humidity = data["main"]["humidity"].toDouble();
+          windSpeed = data["wind"]["speed"].toDouble();
+          isLoading = false;
+        });
