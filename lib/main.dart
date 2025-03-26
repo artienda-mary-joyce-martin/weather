@@ -72,3 +72,21 @@ class _WeatherAppState extends State<WeatherApp> {
     super.initState();
     fetchWeather();
   }
+
+  IconData getWeatherIcon(String description) {
+    description = description.toLowerCase();
+    if (description.contains('clear')) {
+      return FontAwesomeIcons.sun;
+    } else if (description.contains('cloud')) {
+      return FontAwesomeIcons.cloud;
+    } else if (description.contains('rain')) {
+      return FontAwesomeIcons.cloudRain;
+    } else if (description.contains('thunderstorm')) {
+      return FontAwesomeIcons.bolt;
+    } else if (description.contains('snow')) {
+      return FontAwesomeIcons.snowflake;
+    } else if (description.contains('mist') || description.contains('fog')) {
+      return FontAwesomeIcons.smog;
+    }
+    return FontAwesomeIcons.questionCircle;
+  }
