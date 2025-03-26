@@ -66,3 +66,9 @@ class _WeatherAppState extends State<WeatherApp> {
       );
     }
   }
+
+  @override
+  void initState() {
+    super.initState();
+    fetchWeather();
+  }
