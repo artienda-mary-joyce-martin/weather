@@ -30,3 +30,8 @@ class _WeatherAppState extends State<WeatherApp> {
     setState(() {
       isLoading = true;
     });
+
+    final apiKey = "f0cdde6dd81f0415797ef585c5307ca1";
+    final url = Uri.parse(
+        "https://api.openweathermap.org/data/2.5/weather?q=${newCity ??
+            city}&appid=$apiKey&units=${isCelsius ? 'metric' : 'imperial'}");
