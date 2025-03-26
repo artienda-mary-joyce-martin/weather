@@ -252,3 +252,15 @@ class _WeatherAppState extends State<WeatherApp> {
       case 'shower rain':
       case 'rain':
         return Color(0xFF1E88E5); // Blue
+        case 'thunderstorm':
+        return Color(0xFF673AB7); // Deep Purple
+      case 'snow':
+        return Color(0xFF81D4FA); // Light Blue Accent
+      case 'mist':
+        return Color(0xFF009688); // Teal
+      default:
+        return Color(0xFF448AFF); // Blue Accent
+    }
+  }
+
+}
