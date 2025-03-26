@@ -35,3 +35,6 @@ class _WeatherAppState extends State<WeatherApp> {
     final url = Uri.parse(
         "https://api.openweathermap.org/data/2.5/weather?q=${newCity ??
             city}&appid=$apiKey&units=${isCelsius ? 'metric' : 'imperial'}");
+
+    try {
+      final response = await http.get(url);
