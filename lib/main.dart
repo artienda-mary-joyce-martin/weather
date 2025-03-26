@@ -49,3 +49,7 @@ class _WeatherAppState extends State<WeatherApp> {
           windSpeed = data["wind"]["speed"].toDouble();
           isLoading = false;
         });
+        } else {
+        setState(() {
+          isLoading = false;
+        });
