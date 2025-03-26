@@ -53,3 +53,7 @@ class _WeatherAppState extends State<WeatherApp> {
         setState(() {
           isLoading = false;
         });
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("City not found!")),
+        );
+      }
