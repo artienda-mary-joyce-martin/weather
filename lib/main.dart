@@ -155,3 +155,9 @@ class _WeatherAppState extends State<WeatherApp> {
       },
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
