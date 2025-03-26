@@ -129,3 +129,29 @@ class _WeatherAppState extends State<WeatherApp> {
                     },
                     child: Text("Update City"),
                   ),
+                  SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Celsius"),
+                      Switch(
+                        value: isCelsius,
+                        onChanged: (value) {
+                          setState(() {
+                            isCelsius = value;
+                          });
+                          fetchWeather();
+                          Navigator.pop(context);
+                        },
+                      ),
+                      Text("Fahrenheit"),
+                    ],
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
