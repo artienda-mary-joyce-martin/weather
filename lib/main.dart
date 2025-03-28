@@ -101,16 +101,15 @@ class _WeatherAppState extends State<WeatherApp> {
           builder: (BuildContext context, StateSetter setModalState) {
             return Padding(
               padding: EdgeInsets.only(
-                  bottom: MediaQuery
-                      .of(context)
-                      .viewInsets
-                      .bottom,
+                  bottom: MediaQuery.of(context).viewInsets.bottom,
                   left: 16.0,
                   right: 16.0,
                   top: 16.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Text("Settings", style: TextStyle(fontWeight: FontWeight.bold ),),
+                  SizedBox(height: 15,),
                   TextField(
                     controller: cityController,
                     decoration: InputDecoration(
@@ -147,6 +146,53 @@ class _WeatherAppState extends State<WeatherApp> {
                       Text("Fahrenheit"),
                     ],
                   ),
+                  SizedBox(height: 20),
+                  // Adding Team Members section
+                  Text(
+                    "Meet Our Team",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        // Team Member 1
+                        _buildTeamMember(
+                          "Artienda Mary Joyce",
+                          "images/joy.jpg", // Make sure to add the image in your assets folder
+                        ),
+                        SizedBox(height: 10),
+                        // Team Member 2
+                        _buildTeamMember(
+                          "Bulanadi Vianney",
+                          "images/vianney.jpg",
+                        ),
+                        SizedBox(height: 10),
+                        // Team Member 3
+                        _buildTeamMember(
+                          "Culala Andrea",
+                          "images/andrea.jpg",
+                        ),
+                        SizedBox(height: 10),
+                        // Team Member 4
+                        _buildTeamMember(
+                          "Gomez Dexter",
+                          "images/dexter.jpg",
+                        ),
+                        SizedBox(height: 10),
+                        // Team Member 5
+                        _buildTeamMember(
+                          "Timbol Christian",
+                          "images/christian.jpg",
+                        ),
+                        SizedBox(height: 10),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             );
@@ -155,6 +201,23 @@ class _WeatherAppState extends State<WeatherApp> {
       },
     );
   }
+
+  Widget _buildTeamMember(String name, String imagePath) {
+    return Row(
+      children: [
+        CircleAvatar(
+          radius: 30,
+          backgroundImage: AssetImage(imagePath),
+        ),
+        SizedBox(width: 10),
+        Text(
+          name,
+          style: TextStyle(fontSize: 16),
+        ),
+      ],
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -165,7 +228,7 @@ class _WeatherAppState extends State<WeatherApp> {
         backgroundColor: Colors.black,
         actions: [
           IconButton(
-            icon: Icon(Icons.settings),
+            icon: Icon(Icons.settings, color: Colors.white,),
             onPressed: openSettings,
           ),
         ],
