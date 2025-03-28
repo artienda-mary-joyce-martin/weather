@@ -1,4 +1,4 @@
-package com.example.we;
+package com.devops.skywatch;
 
 import io.flutter.embedding.android.FlutterActivity;
 

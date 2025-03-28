@@ -1,0 +1,2 @@
+D:/MyMobileApps/weather/android/app/.cxx/Debug/285f5e2o/x86/CMakeFiles/edit_cache.dir
+D:/MyMobileApps/weather/android/app/.cxx/Debug/285f5e2o/x86/CMakeFiles/rebuild_cache.dir
